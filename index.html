@@ -108,7 +108,7 @@
 				/>
 				<div class="drag-text">
 					<img src="imagesource/UploadIcon.png" alt="" class="mt-5 pt-5 upload-icon" />
-					<h3 class="mb-5 pb-5 pt-4 upload-text">얼굴 사진<br/>업로드</h3>
+					<h3 class="mb-5 pb-5 pt-4 upload-text">얼굴 사진 업로드</h3>
 				</div>
 			</div>
 			<div class="file-upload-content">
@@ -180,6 +180,7 @@
 
 			function removeUpload() {
 				$(".result-photo").css("display","none");
+				$(".result-message").css("display","none");
 				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
 				$('.file-upload-content').hide();
 				$('.image-upload-wrap').show();
