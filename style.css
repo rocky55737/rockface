@@ -171,6 +171,10 @@ body {
 	}
 }
 
+.container, .container-sm {
+    width: 70%;
+}
+
 .youtube-link {
 	font-family: NanumSquareR;
 	font-size: 1.5rem;
