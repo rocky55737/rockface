@@ -86,7 +86,7 @@ body {
   text-transform: uppercase;
   color: #35465d;
 	font-family: NanumSquareR;
-	font-size: 2rem;
+	font-size: 1.2rem;
 	line-height: 1.53;
 	text-align: center;
 	margin: 0 auto;
@@ -242,4 +242,8 @@ body {
 
 #result-title-message {
 	font-weight: bold;
+}
+.add-banner {
+	width: 320px;
+	margin: 0 auto;
 }

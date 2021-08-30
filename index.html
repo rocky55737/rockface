@@ -16,10 +16,16 @@
 		<title>돌멩이상 테스트</title>
 		<link rel="stylesheet" href="style.css" />
 		<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-612c8ac953c8b679"></script>
-		
-		<script data-ad-client="ca-pub-5982463429123112" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script
+			type="text/javascript"
+			src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-612c8ac953c8b679"
+		></script>
 
+		<script
+			data-ad-client="ca-pub-5982463429123112"
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+		></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light nav-distance">
@@ -108,34 +114,94 @@
 				/>
 				<div class="drag-text">
 					<img src="imagesource/UploadIcon.png" alt="" class="mt-5 pt-5 upload-icon" />
-					<h3 class="mb-5 pb-5 pt-4 upload-text">얼굴 사진 업로드</h3>
+					<h3 class="mb-5 pb-5 pt-4 upload-text">얼굴 사진<br/>업로드</h3>
 				</div>
 			</div>
 			<div class="file-upload-content">
-				<img class="file-upload-image" id="face-image" src="#" alt="your image" /><br/>
-				<img src="imagesource/result1.jpg" alt="" class="result-photo" id="result1" style="display: none"/>
-<img src="imagesource/result2.jpg" alt="" class="result-photo" id="result2" style="display: none"/>
-<img src="imagesource/result3.jpg" alt="" class="result-photo" id="result3" style="display: none"/>
-<img src="imagesource/result4.jpg" alt="" class="result-photo" id="result4" style="display: none"/>
-<img src="imagesource/result5.jpg" alt="" class="result-photo" id="result5" style="display: none"/>
-<img src="imagesource/result6.jpg" alt="" class="result-photo" id="result6" style="display: none"/>
-<img src="imagesource/result7.jpg" alt="" class="result-photo" id="result7" style="display: none"/>
-<img src="imagesource/result8.jpeg" alt="" class="result-photo" id="result8" style="display: none"/>
+				<img class="file-upload-image" id="face-image" src="#" alt="your image" /><br />
+				<img
+					src="imagesource/result1.jpg"
+					alt=""
+					class="result-photo"
+					id="result1"
+					style="display: none;"
+				/>
+				<img
+					src="imagesource/result2.jpg"
+					alt=""
+					class="result-photo"
+					id="result2"
+					style="display: none;"
+				/>
+				<img
+					src="imagesource/result3.jpg"
+					alt=""
+					class="result-photo"
+					id="result3"
+					style="display: none;"
+				/>
+				<img
+					src="imagesource/result4.jpg"
+					alt=""
+					class="result-photo"
+					id="result4"
+					style="display: none;"
+				/>
+				<img
+					src="imagesource/result5.jpg"
+					alt=""
+					class="result-photo"
+					id="result5"
+					style="display: none;"
+				/>
+				<img
+					src="imagesource/result6.jpg"
+					alt=""
+					class="result-photo"
+					id="result6"
+					style="display: none;"
+				/>
+				<img
+					src="imagesource/result7.jpg"
+					alt=""
+					class="result-photo"
+					id="result7"
+					style="display: none;"
+				/>
+				<img
+					src="imagesource/result8.jpeg"
+					alt=""
+					class="result-photo"
+					id="result8"
+					style="display: none;"
+				/>
 				<p class="result-message"></p>
 				<div id="label-container"></div>
 				<div class="image-title-wrap">
 					<button type="button" onclick="removeUpload()" class="remove-image">
 						다시하기
 					</button>
-						
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                <div class="mt-3 addthis_inline_share_toolbox"></div>
 
+					<!-- Go to www.addthis.com/dashboard to customize your tools -->
+					<div class="mt-3 addthis_inline_share_toolbox"></div>
 				</div>
 			</div>
+			<div class="pt-5 ad-banner">
+				<ins
+					class="kakao_ad_area"
+					style="display: none;"
+					data-ad-unit="DAN-bYBmjnOjfcnm0D11"
+					data-ad-width="320"
+					data-ad-height="100"
+				></ins>
+				<script
+					type="text/javascript"
+					src="//t1.daumcdn.net/kas/static/ba.min.js"
+					async
+				></script>
+			</div>
 		</div>
-		<div id="webcam-container"></div>
-		
+
 		<!-- Optional JavaScript; choose one of the two! -->
 
 		<!-- Option 1: Bootstrap Bundle with Popper -->
@@ -152,9 +218,6 @@
     -->
 
 		<script>
-
-			
-			
 			function readURL(input) {
 				if (input.files && input.files[0]) {
 					var reader = new FileReader();
@@ -169,8 +232,8 @@
 					};
 
 					reader.readAsDataURL(input.files[0]);
-					init().then(function(){
-						console.log("complete");
+					init().then(function () {
+						console.log('complete');
 						predict();
 					});
 				} else {
@@ -179,8 +242,8 @@
 			}
 
 			function removeUpload() {
-				$(".result-photo").css("display","none");
-				$(".result-message").css("display","none");
+				$('.result-photo').css('display', 'none');
+				$('.result-message').css('display', 'none');
 				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
 				$('.file-upload-content').hide();
 				$('.image-upload-wrap').show();
@@ -192,7 +255,7 @@
 				$('.image-upload-wrap').removeClass('image-dropping');
 			});
 		</script>
-				<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 		<script type="text/javascript">
 			// More API functions here:
@@ -215,71 +278,75 @@
 				model = await tmImage.load(modelURL, metadataURL);
 				maxPredictions = model.getTotalClasses();
 
-
 				// append elements to the DOM
-				labelContainer = document.getElementById("label-container");
-        for (let i = 0; i < maxPredictions; i++) { // and class labels
-            labelContainer.appendChild(document.createElement("div"));
+				labelContainer = document.getElementById('label-container');
+				for (let i = 0; i < maxPredictions; i++) {
+					// and class labels
+					labelContainer.appendChild(document.createElement('div'));
 				}
 			}
 
 			// run the webcam image through the image model
-    async function predict() {
-        // predict can take in an image, video or canvas html element
-	var image = document.getElementById("face-image");
-        const prediction = await model.predict(image, false);
-		prediction.sort((a,b) => parseFloat(b.probability) - parseFloat(a.probability));
-		console.log(prediction);
-		
-		
-		var resultTitle, resultExplain, resultCode;
-                switch (prediction[0].className) {
-                    case "맷돌":
-                        resultTitle = "맷돌"
-                        resultExplain = "어처구니가 없네"
-						resultCode="result1"
-                        break;
-                    case "주먹도끼":
-                        resultTitle = "주먹도끼"
-                        resultExplain = "우가!"
-						resultCode="result2"
-                        break;
-                    case "돌하르방":
-                        resultTitle = "돌하르방"
-                        resultExplain = "슈슉. 슉. 시. 시발럼아"
-						resultCode="result3"
-                        break;
-                    case "모아이석상":
-                        resultTitle = "모아이석상"
-                        resultExplain = "아니요."
-						resultCode="result4"
-                        break;
-                    case "꼬마돌":
-                        resultTitle = "꼬마돌"
-                        resultExplain = "나는 돌이다"
-						resultCode="result5"
-                        break;
-                    case "말파이트":
-                        resultTitle = "말파이트"
-                        resultExplain = "바위처럼 단단하게"
-						resultCode="result6"
-                        break;
-                    case "보석":
-                        resultTitle = "보석"
-                        resultExplain = "그저 빛"
-						resultCode="result7"
-                        break;
-                    default:
-                        resultTitle = "닮은 돌 찾는 중"
-                        resultExplain = "곰곰..."
-						resultCode="result8"
+			async function predict() {
+				// predict can take in an image, video or canvas html element
+				var image = document.getElementById('face-image');
+				const prediction = await model.predict(image, false);
+				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+				console.log(prediction);
+
+				var resultTitle, resultExplain, resultCode;
+				switch (prediction[0].className) {
+					case '맷돌':
+						resultTitle = '맷돌';
+						resultExplain = '어처구니가 없네';
+						resultCode = 'result1';
+						break;
+					case '주먹도끼':
+						resultTitle = '주먹도끼';
+						resultExplain = '우가!';
+						resultCode = 'result2';
+						break;
+					case '돌하르방':
+						resultTitle = '돌하르방';
+						resultExplain = '슈슉. 슉. 시. 시발럼아';
+						resultCode = 'result3';
+						break;
+					case '모아이석상':
+						resultTitle = '모아이석상';
+						resultExplain = '아니요.';
+						resultCode = 'result4';
+						break;
+					case '꼬마돌':
+						resultTitle = '꼬마돌';
+						resultExplain = '나는 돌이다';
+						resultCode = 'result5';
+						break;
+					case '말파이트':
+						resultTitle = '말파이트';
+						resultExplain = '바위처럼 단단하게';
+						resultCode = 'result6';
+						break;
+					case '보석':
+						resultTitle = '보석';
+						resultExplain = '그저 빛';
+						resultCode = 'result7';
+						break;
+					default:
+						resultTitle = '닮은 돌 찾는 중';
+						resultExplain = '곰곰...';
+						resultCode = 'result8';
 				}
-		
-		 var title = "<div class='" + resultCode + "-rock-title' id='result-title-message'>" + resultTitle + "</div>"
-            var explain = "<div class='rock-explain pt-2'>" + resultExplain + "</div>"
-		$('.result-message').html( title + explain);
-		$(".result-message").css("display","inline");
-		document.getElementById(resultCode).style.display = "inline";
+
+				var title =
+					"<div class='" +
+					resultCode +
+					"-rock-title' id='result-title-message'>" +
+					resultTitle +
+					'</div>';
+				var explain = "<div class='rock-explain pt-2'>" + resultExplain + '</div>';
+				$('.result-message').html(title + explain);
+				$('.result-message').css('display', 'inline');
+				document.getElementById(resultCode).style.display = 'inline';
 			}
 		</script>
 	</body>
